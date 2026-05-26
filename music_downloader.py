@@ -19,6 +19,13 @@ def download_as_mp3(query, output_dir="downloads"):
         'default_search': 'ytsearch',
         'noplaylist': True,
         'quiet': True,
+        'no_check_certificate': True,
+        'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['web_creator', 'android'],
+            }
+        }
     }
 
     try:
